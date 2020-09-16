@@ -28,7 +28,7 @@ $navigations = [
                 'active'=>['site/test']]
         ],
     ],
-        ['label'=>'Menu Two', 'icon'=>'fas fa-tachometer-alt', 'url'=>'#','visible'=>1,'active'=>['site/tes']],
+        ['label'=>'Listing', 'icon'=>'fas fa-tachometer-alt', 'url'=>['site/listing'],'visible'=>1,'active'=>['site/listing']],
 
 ];
 

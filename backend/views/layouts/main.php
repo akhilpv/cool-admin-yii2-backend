@@ -11,6 +11,8 @@ use yii\widgets\Breadcrumbs;
 use common\widgets\Alert;
 
 AppAsset::register($this);
+$this->registerJsFile('@web/backend/web/files/vendor/jquery-3.2.1.min.js');
+
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>

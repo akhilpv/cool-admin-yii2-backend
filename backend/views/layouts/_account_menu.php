@@ -1,3 +1,8 @@
+<?php
+use yii\helpers\URL;
+use yii\helpers\Html;
+
+?>
 <div class="account-wrap">
     <div class="account-item clearfix js-item-menu">
         <div class="image">
@@ -35,8 +40,7 @@
                 </div>
             </div>
             <div class="account-dropdown__footer">
-                <a href="#">
-                    <i class="zmdi zmdi-power"></i>Logout</a>
+            <?=Html::a('<i class="zmdi zmdi-power"></i>Logout',Url::to(['site/logout']), ['data-method' => 'post'])?>
             </div>
         </div>
     </div>

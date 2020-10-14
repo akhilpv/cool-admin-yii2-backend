@@ -12,7 +12,6 @@ use common\widgets\Alert;
 
 AppAsset::register($this);
 $this->registerJsFile('@web/backend/web/files/vendor/jquery-3.2.1.min.js');
-
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -103,10 +102,6 @@ $this->registerJsFile('@web/backend/web/files/vendor/jquery-3.2.1.min.js');
                             <div class="col-md-12">
                                 <div class="overview-wrap">
                                     <h2 class="title-1">overview</h2>
-                                    <button class="au-btn au-btn-icon au-btn--blue">
-                                        <i class="zmdi zmdi-plus"></i>add item</button>
-                                        
-                                </div>
                             </div>
                         </div>
                         <?=$content?>

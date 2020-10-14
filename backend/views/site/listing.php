@@ -2,188 +2,80 @@
 
 /* @var $this yii\web\View */
 
+use yii\grid\GridView;
+use yii\data\ArrayDataProvider;
 $this->title = 'My Yii Application';
+
+$data = [
+    ['date' => '2018-10-12', 'type' => 'Mobile','description'=>'Iphone X 64GB Grey','status'=>'Processed','price'=>'100'],
+    ['date' => '2018-10-12', 'type' => null,'description'=>'Iphone X 64GB Grey','status'=>'Processed','price'=>'100'],
+];
+
+$provider = new ArrayDataProvider([
+    'allModels' => $data,
+    'pagination' => [
+        'pageSize' => 10,
+    ],
+    'sort' => [
+        'attributes' => ['id', 'name'],
+    ],
+]);
 ?>
-<div class="row m-t-25">
-<div class="user-data m-b-30">
-    <h3 class="title-3 m-b-30">
-        <i class="zmdi zmdi-account-calendar"></i>user data</h3>
-    <div class="filters m-b-45">
-        <div class="rs-select2--dark rs-select2--md m-r-10 rs-select2--border">
-            <select class="js-select2 select2-hidden-accessible" name="property" tabindex="-1" aria-hidden="true">
-                <option selected="selected">All Properties</option>
-                <option value="">Products</option>
-                <option value="">Services</option>
-            </select><span class="select2 select2-container select2-container--default select2-container--below" dir="ltr" style="width: 132.15px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-property-ut-container"><span class="select2-selection__rendered" id="select2-property-ut-container" title="Products">Products</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-            <div class="dropDownSelect2"></div>
-        </div>
-        <div class="rs-select2--dark rs-select2--sm rs-select2--border">
-            <select class="js-select2 au-select-dark select2-hidden-accessible" name="time" tabindex="-1" aria-hidden="true">
-                <option selected="selected">All Time</option>
-                <option value="">By Month</option>
-                <option value="">By Day</option>
-            </select><span class="select2 select2-container select2-container--default select2-container--below" dir="ltr" style="width: 96.6px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-time-mu-container"><span class="select2-selection__rendered" id="select2-time-mu-container" title="By Day">By Day</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-            <div class="dropDownSelect2"></div>
-        </div>
-    </div>
-    <div class="table-responsive table-data">
-        <table class="table">
-            <thead>
-                <tr>
-                    <td>
-                        <label class="au-checkbox">
-                            <input type="checkbox">
-                            <span class="au-checkmark"></span>
-                        </label>
-                    </td>
-                    <td>name</td>
-                    <td>role</td>
-                    <td>type</td>
-                    <td></td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <label class="au-checkbox">
-                            <input type="checkbox">
-                            <span class="au-checkmark"></span>
-                        </label>
-                    </td>
-                    <td>
-                        <div class="table-data__info">
-                            <h6>lori lynch</h6>
-                            <span>
-                                <a href="#">johndoe@gmail.com</a>
-                            </span>
-                        </div>
-                    </td>
-                    <td>
-                        <span class="role admin">admin</span>
-                    </td>
-                    <td>
-                        <div class="rs-select2--trans rs-select2--sm">
-                            <select class="js-select2 select2-hidden-accessible" name="property" tabindex="-1" aria-hidden="true">
-                                <option selected="selected">Full Control</option>
-                                <option value="">Post</option>
-                                <option value="">Watch</option>
-                            </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 118.8px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-property-ct-container"><span class="select2-selection__rendered" id="select2-property-ct-container" title="Full Control">Full Control</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                            <div class="dropDownSelect2"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <span class="more">
-                            <i class="zmdi zmdi-more"></i>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label class="au-checkbox">
-                            <input type="checkbox" checked="checked">
-                            <span class="au-checkmark"></span>
-                        </label>
-                    </td>
-                    <td>
-                        <div class="table-data__info">
-                            <h6>lori lynch</h6>
-                            <span>
-                                <a href="#">johndoe@gmail.com</a>
-                            </span>
-                        </div>
-                    </td>
-                    <td>
-                        <span class="role user">user</span>
-                    </td>
-                    <td>
-                        <div class="rs-select2--trans rs-select2--sm">
-                            <select class="js-select2 select2-hidden-accessible" name="property" tabindex="-1" aria-hidden="true">
-                                <option value="">Full Control</option>
-                                <option value="" selected="selected">Post</option>
-                                <option value="">Watch</option>
-                            </select><span class="select2 select2-container select2-container--default select2-container--below" dir="ltr" style="width: 110.8px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-property-45-container"><span class="select2-selection__rendered" id="select2-property-45-container" title="Full Control">Full Control</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                            <div class="dropDownSelect2"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <span class="more">
-                            <i class="zmdi zmdi-more"></i>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label class="au-checkbox">
-                            <input type="checkbox">
-                            <span class="au-checkmark"></span>
-                        </label>
-                    </td>
-                    <td>
-                        <div class="table-data__info">
-                            <h6>lori lynch</h6>
-                            <span>
-                                <a href="#">johndoe@gmail.com</a>
-                            </span>
-                        </div>
-                    </td>
-                    <td>
-                        <span class="role user">user</span>
-                    </td>
-                    <td>
-                        <div class="rs-select2--trans rs-select2--sm">
-                            <select class="js-select2 select2-hidden-accessible" name="property" tabindex="-1" aria-hidden="true">
-                                <option value="">Full Control</option>
-                                <option value="" selected="selected">Post</option>
-                                <option value="">Watch</option>
-                            </select><span class="select2 select2-container select2-container--default select2-container--below" dir="ltr" style="width: 110.8px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-property-0p-container"><span class="select2-selection__rendered" id="select2-property-0p-container" title="Full Control">Full Control</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                            <div class="dropDownSelect2"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <span class="more">
-                            <i class="zmdi zmdi-more"></i>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label class="au-checkbox">
-                            <input type="checkbox">
-                            <span class="au-checkmark"></span>
-                        </label>
-                    </td>
-                    <td>
-                        <div class="table-data__info">
-                            <h6>lori lynch</h6>
-                            <span>
-                                <a href="#">johndoe@gmail.com</a>
-                            </span>
-                        </div>
-                    </td>
-                    <td>
-                        <span class="role member">member</span>
-                    </td>
-                    <td>
-                        <div class="rs-select2--trans rs-select2--sm">
-                            <select class="js-select2 select2-hidden-accessible" name="property" tabindex="-1" aria-hidden="true">
-                                <option selected="selected">Full Control</option>
-                                <option value="">Post</option>
-                                <option value="">Watch</option>
-                            </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 118.8px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-property-xt-container"><span class="select2-selection__rendered" id="select2-property-xt-container" title="Full Control">Full Control</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                            <div class="dropDownSelect2"></div>
-                        </div>
-                    </td>
-                    <td>
-                        <span class="more">
-                            <i class="zmdi zmdi-more"></i>
-                        </span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="user-data__footer">
-        <button class="au-btn au-btn-load">load more</button>
-    </div>
+    <div class="col-md-12 m-t-25">
+    <div class="table-data__tool">
+                                    <div class="table-data__tool-left">
+                                        <div class="rs-select2--light rs-select2--md">
+                                            <select class="js-select2" name="property">
+                                                <option selected="selected">All Properties</option>
+                                                    <option value="">Option 1</option>
+                                                <option value="">Option 2</option>
+                                            </select>
+                                            <div class="dropDownSelect2"></div>
+                                        </div>
+                                        <div class="rs-select2--light rs-select2--sm">
+                                            <select class="js-select2" name="time">
+                                                <option selected="selected">Today</option>
+                                                <option value="">3 Days</option>
+                                                <option value="">1 Week</option>
+                                            </select>
+                                            <div class="dropDownSelect2"></div>
+                                        </div>
+                                        <button class="au-btn-filter">
+                                            <i class="zmdi zmdi-filter-list"></i>filters</button>
+                                    </div>
+                                    <div class="table-data__tool-right">
+                                        <button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                                            <i class="zmdi zmdi-plus"></i>add item</button>
+                                        <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
+                                            <select class="js-select2" name="type">
+                                                <option selected="selected">Export</option>
+                                                <option value="">Option 1</option>
+                                                <option value="">Option 2</option>
+                                            </select>
+                                            <div class="dropDownSelect2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="table-responsive m-b-40">
+
+                                <?= GridView::widget([
+    'dataProvider' => $provider,
+    'emptyCell'=>'NA',
+    'tableOptions'=>['class'=>'table table-borderless table-striped table-earning'],
+    'columns' => [
+        'date',
+        'type',
+        'description',
+        'status',
+        'price'
+       
+    ],
+]) ?>
+                    
+                                </div>
+
 </div>
 </div>
+
+

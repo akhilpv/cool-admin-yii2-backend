@@ -75,6 +75,7 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
+        // echo Yii::$app->security->generatePasswordHash('123456');die;
         $this->layout='login';
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();

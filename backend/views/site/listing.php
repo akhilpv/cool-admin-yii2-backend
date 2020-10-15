@@ -63,6 +63,12 @@ $provider = new ArrayDataProvider([
     'dataProvider' => $provider,
     'emptyCell'=>'NA',
     'tableOptions'=>['class'=>'table table-borderless table-striped table-earning'],
+    'pager'=>[
+        'linkContainerOptions'=>['class'=>'page-item'],
+        'linkOptions'=>['class'=>'page-link'],
+        'options' => [
+        'class' => 'pagination  pull-right pt-2',
+    ]],
     'columns' => [
         'date',
         'type',
@@ -72,8 +78,8 @@ $provider = new ArrayDataProvider([
        
     ],
 ]) ?>
-                    
-                                </div>
+
+</div>
 
 </div>
 </div>
